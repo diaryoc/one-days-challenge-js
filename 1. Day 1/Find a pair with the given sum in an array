@@ -12,6 +12,3 @@ Output: Pair found (8, 2)orPair found (7, 3)
 Input: nums = [5, 2, 6, 8, 1, 9]
 target = 12
 Output: Pair not found
-
-
-asdasd
