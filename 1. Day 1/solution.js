@@ -22,4 +22,4 @@ function PairNumberForGivenSum(arrayOfNumber, target) {
     };
     return "Pair not found"
 }
-console.log(PairNumberForGivenSum([5, 2, 6, 8, 1, 9],12))
+console.log(PairNumberForGivenSum([2,3,1,5,6,7,4,9,8],10))
