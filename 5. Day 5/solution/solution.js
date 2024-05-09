@@ -2,12 +2,21 @@ document.querySelectorAll(".drum").forEach((element) => {
     element.addEventListener("click", function(){
         let buttonClicked = this.innerHTML
         makeSound(buttonClicked)
+        animatedKey(buttonClicked)
     })
 })
 
 document.addEventListener("keydown", function(e) {
     makeSound(e.key)
+    animatedKey(e.key)
 })
+
+function animatedKey(elementClicked) {
+    document.querySelector("."+elementClicked).classList.add("pressed")
+    setTimeout(function (){
+        document.querySelector("."+elementClicked).classList.remove("pressed")
+    },100)
+}
 
 function makeSound(key) {
     switch (key) {
