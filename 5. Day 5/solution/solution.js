@@ -1,9 +1,13 @@
-for (let i = 0; i < document.querySelectorAll(".drum").length; i++) {
-    document.querySelectorAll(".drum")[i].addEventListener("click", function(){
+document.querySelectorAll(".drum").forEach((element) => {
+    element.addEventListener("click", function(){
         let buttonClicked = this.innerHTML
         makeSound(buttonClicked)
     })
-}
+})
+
+document.addEventListener("keydown", function(e) {
+    makeSound(e.key)
+})
 
 function makeSound(key) {
     switch (key) {
