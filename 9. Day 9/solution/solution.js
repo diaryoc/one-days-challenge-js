@@ -41,8 +41,6 @@ function nextSequence() {
     $("#level-title").text("Level "+gamePattern.length);
     $("#"+randomColor).fadeOut(100).fadeIn(100);
     playSound(randomColor)
-    console.log(userPattern)
-    console.log(gamePattern)
 }
 function playSound(name) {
     let audio = new Audio("sounds/"+name+".mp3");
