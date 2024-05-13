@@ -9,6 +9,8 @@ $(document).keypress(function (event) {
 $(".btn").each(function () {
     $(this).on("click", function () {
         userPattern.push($(this).attr("id"));
+        $(this).fadeOut(100).fadeIn(100);
+        playSound($(this).attr("id"))
         if (gamePattern[userPattern.length - 1] === userPattern[userPattern.length - 1]) {
             if (userPattern.length === gamePattern.length) {
                 setTimeout(function () {
@@ -18,9 +20,6 @@ $(".btn").each(function () {
         }else {
             gameOver()
         }
-        console.log(userPattern)
-        console.log(gamePattern)
-        playSound($(this).attr("id"))
     })
 })
 
@@ -32,6 +31,7 @@ function gameOver() {
     setTimeout(function () {
         body.removeClass("game-over")
     },100)
+    $("#level-title").text("Game Over, Press A Key to restart");
 }
 function nextSequence() {
     userPattern = []
@@ -47,8 +47,4 @@ function nextSequence() {
 function playSound(name) {
     let audio = new Audio("sounds/"+name+".mp3");
     audio.play();
-}
-
-function animatedButton(){
-
 }
