@@ -131,3 +131,4 @@ dist
 .pnp.*
 
 /10. QR Code Generator/solution/node_modules/
+/13. To Do List/node_modules/
