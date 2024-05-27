@@ -19,3 +19,5 @@ const largestProduct = (input, span) => {
     }
     return Math.max(...lsp);
 };
+
+console.log(largestProduct());
